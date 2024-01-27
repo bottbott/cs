@@ -1,12 +1,24 @@
 ---
-title: "Pandoc Markdown CSS Theme"
-subtitle: "Starter files for generating HTML from Pandoc Markdown"
-author: "@jez"
-author-url: 'https://github.com/jez'
-date: "2021-06-20"
+title: "Ryan's Documentation"
+subtitle: "Cross spectrum documentation"
+author: "@bottbott"
+author-url: 'https://github.com/bottbott'
+date: "2024-01-22"
 ---
 
-HAHAHHA no way
+# School Sections
+
+[214](214/)
+
+[333](333/)
+
+[366](366/)
+
+[401](401/)
+
+# References
+
+[Markdown & Latex](other/markdown_latex.html)
 
 This project provides CSS files and a template for using Pandoc[^pandoc] to
 generate standalone HTML files. It supports most features Pandoc Markdown has to

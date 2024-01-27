@@ -21,4 +21,4 @@ else
   xdg-open "http://127.0.0.1:8000"
 fi
 
-watchman-make -p 'src/*' 'public/*' '*.html5' 'Makefile' -r 'make'
+watchman-make -p 'src/**' 'public/*' '*.html5' 'Makefile' -r 'make'
