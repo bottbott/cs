@@ -1,0 +1,1747 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An introduction for using Markdown and LaTeX">
+      
+      
+        <meta name="author" content="Ashkan Mirzaee">
+      
+      
+      
+        <link rel="prev" href="../dork/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+    
+    
+      
+        <title>Markdown and LaTeX introduction - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markdown" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Markdown and LaTeX introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ryan's Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index_old/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../214/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    214
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            214
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../214/algebraicTricks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebraic Tricks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../214/sequence_limits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequences - Limits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../214/sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../333/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    333
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            333
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../366/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    366
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            366
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../366/a_star/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A* Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../366/data_structures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../366/dijkstra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dijkstra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../401/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    401
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            401
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    freaking test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Markdown and LaTeX introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Markdown and LaTeX introduction
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h3" class="md-nav__link">
+    <span class="md-ellipsis">
+      H3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h4" class="md-nav__link">
+    <span class="md-ellipsis">
+      H4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h5" class="md-nav__link">
+    <span class="md-ellipsis">
+      H5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h6" class="md-nav__link">
+    <span class="md-ellipsis">
+      H6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emphasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emphasis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quotes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hlines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hlines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code blocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathematical-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical formula
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Headers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Headers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h3" class="md-nav__link">
+    <span class="md-ellipsis">
+      H3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h4" class="md-nav__link">
+    <span class="md-ellipsis">
+      H4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h5" class="md-nav__link">
+    <span class="md-ellipsis">
+      H5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="H5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#h6" class="md-nav__link">
+    <span class="md-ellipsis">
+      H6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emphasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emphasis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quotes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hlines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hlines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code blocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML header
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathematical-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical formula
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="markdown">Markdown<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h1>
+<p>This resource is from [https://ashki23.github.io/markdown-latex.html]</p>
+<p>The following provides a quick reference to the most commonly used
+Markdown syntax.    </p>
+<h2 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">&para;</a></h2>
+<h3 id="h3">H3<a class="headerlink" href="#h3" title="Permanent link">&para;</a></h3>
+<h4 id="h4">H4<a class="headerlink" href="#h4" title="Permanent link">&para;</a></h4>
+<h5 id="h5">H5<a class="headerlink" href="#h5" title="Permanent link">&para;</a></h5>
+<h6 id="h6">H6<a class="headerlink" href="#h6" title="Permanent link">&para;</a></h6>
+<p>::: {#cb1 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode"># Markdown
+The following provides a quick reference to the most commonly used Markdown syntax.
+
+## Headers
+### H3
+#### H4
+##### H5
+###### H6
+</code></pre>
+<p>:::</p>
+<h2 id="emphasis">Emphasis<a class="headerlink" href="#emphasis" title="Permanent link">&para;</a></h2>
+<p><em>Italic</em> and <strong>Bold</strong></p>
+<p>::: {#cb2 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">*Italic* and **Bold**
+</code></pre>
+<p>:::</p>
+<p>~~Scratched Text~~</p>
+<p>::: {#cb3 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">~~Scratched Text~~
+</code></pre>
+<p>:::</p>
+<p>superscript^2^</p>
+<p>::: {#cb4 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">superscript^2^
+</code></pre>
+<p>:::</p>
+<p>Markdown doesn't support underline, but we can use [HTML
+Text]{.underline} instead. Also, <strong>we</strong> can <em>render</em> almost any
+[HTML]{style="color:red;"} code that we [like]{.kbd} such as
+superscript^2^.</p>
+<p>::: {#cb5 .sourceCode}</p>
+<pre class="html"><code class="language-sourceCode">Markdown doesn't support underline, but we can use &lt;u&gt;HTML Text&lt;/u&gt; instead. Also, &lt;b&gt;we&lt;/b&gt; can &lt;i&gt;render&lt;/i&gt; almost any &lt;span style=&quot;color:red;&quot;&gt;HTML&lt;/span&gt; code that we &amp;nbsp; &lt;kbd&gt;like&lt;/kbd&gt; &amp;nbsp; such as superscript&lt;sup&gt;2&lt;/sup&gt;.
+</code></pre>
+<p>:::</p>
+<p>For manual line or page breaks, we can use following HTML and CSS codes:</p>
+<ul>
+<li>Line breaks:</li>
+</ul>
+<p>::: {#cb6 .sourceCode}</p>
+<pre class="html"><code class="language-sourceCode">&lt;br /&gt;
+</code></pre>
+<p>:::</p>
+<ul>
+<li>Print breaks:</li>
+</ul>
+<p>::: {#cb7 .sourceCode}</p>
+<pre class="css"><code class="language-sourceCode">&lt;p style=&quot;page-break-after:always;&quot;&gt;&lt;/p&gt;
+</code></pre>
+<p>:::</p>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Item 1</li>
+<li>Item 2<ul>
+<li>Item 2a</li>
+<li>Item 2b<ul>
+<li>Item 2b-1</li>
+<li>Item 2b-2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>::: {#cb8 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">- Item 1
+- Item 2
+    - Item 2a (2 tabs)
+    - Item 2b
+        - Item 2b-1 (4 tabs)
+        - Item 2b-2
+</code></pre>
+<p>:::</p>
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3<ul>
+<li>Item 3a</li>
+<li>Item 3b</li>
+</ul>
+</li>
+</ol>
+<p>::: {#cb9 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">1. Item 1
+2. Item 2
+3. Item 3
+    - Item 3a
+    - Item 3b
+</code></pre>
+<p>:::</p>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.github.com/">Github</a></p>
+<p>::: {#cb10 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">[Github](http://www.github.com/)
+</code></pre>
+<p>:::</p>
+<h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h2>
+<p><img alt="logo" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png" title="fig:Raspberry pi" /></p>
+<p>::: {#cb11 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">&lt;p align=&quot;center&quot;&gt;
+![logo](https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png &quot;Raspberry pi&quot;)
+&lt;/p&gt;
+</code></pre>
+<p>:::</p>
+<p>Note that here we used an HTML code to align center the image. Also, we
+can use HTML to add more styles, for example:</p>
+<p>::: {#cb12 .sourceCode}</p>
+<pre class="html"><code class="language-sourceCode">&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN-199x250.png&quot; alt=&quot;Raspberry pi&quot; style=&quot;width:20%; border:0;&quot;&gt;
+&lt;/p&gt;
+</code></pre>
+<p>:::</p>
+<h2 id="quotes">Quotes<a class="headerlink" href="#quotes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Imagination is more important than knowledge.</p>
+<p>Albert Einstein</p>
+</blockquote>
+<p>::: {#cb13 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">&gt; Imagination is more important than knowledge.
+&gt;
+&gt; Albert Einstein
+</code></pre>
+<p>:::</p>
+<h2 id="hlines">Hlines<a class="headerlink" href="#hlines" title="Permanent link">&para;</a></h2>
+<p>Use three dashes <code>---</code> to draw an horizontal line like:</p>
+<hr />
+<p>::: {#cb14 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">---
+</code></pre>
+<p>:::</p>
+<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h2>
+<p>::: {style="margin-bottom: 1rem; overflow-x: auto;"}
+  1st Header      2nd Header      3rd Header</p>
+<hr />
+<p>col 1 is       left-aligned              1
+  col 2 is      center-aligned             2
+  col 3 is      right-aligned              3
+:::</p>
+<p>::: {#cb15 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">1st Header|2nd Header|3rd Header
+---|:---:|---: 
+col 1 is|left-aligned|1
+col 2 is|center-aligned|2
+col 3 is|right-aligned|3
+</code></pre>
+<p>:::</p>
+<p>Note that we can use HTML styles to hide tables' overflow by putting
+them in a division like:</p>
+<p>::: {#cb16 .sourceCode}</p>
+<pre class="html"><code class="language-sourceCode">&lt;div &quot;margin-bottom: 1rem; overflow-x: auto;&quot;&gt;
+...
+&lt;/div&gt;
+</code></pre>
+<p>:::</p>
+<p>Also, we can use <code>overflow-x: scroll</code> to always scroll or
+<code>overflow-x: hidden</code> to hide them compeletely.</p>
+<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
+<p>In Markdown, we can simply add plain code blocks to display (not
+evaluating) by inserting triple back quote i.e. <code>```</code>. For
+example:</p>
+<p>::: {#cb17 .sourceCode}</p>
+<pre class="r"><code class="language-sourceCode">norm = function(x) {
+  sqrt(x%*%x)
+}
+norm(1:4)
+</code></pre>
+<p>:::</p>
+<p>::: {#cb18 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">` ``r
+norm &lt;- function(x) {
+  sqrt(x%*%x)
+}
+norm(1:4)
+` ``
+</code></pre>
+<p>:::</p>
+<p>For inline plain codes use single back quote before and after the code,
+for example we defined <code>this codes here</code> in this way.</p>
+<h2 id="yaml-header">YAML header<a class="headerlink" href="#yaml-header" title="Permanent link">&para;</a></h2>
+<p>At the top of a Markdown document, we can insert the following meta data
+such that:</p>
+<p>::: {#cb19 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">---
+title: &quot;Page Title&quot;
+subtitle: &quot;Page sub-title&quot;
+author: &quot;Author name&quot;
+description: &quot;This is a test&quot;
+institute: &quot;MU&quot;
+date: &quot;20/02/2020&quot;
+abstract: &quot;YAML&quot;
+keywords: 
+  - key1
+  - key2
+tags:
+  - tag1
+  - tag2
+---
+</code></pre>
+<p>:::</p>
+<h2 id="mathematical-formula">Mathematical formula<a class="headerlink" href="#mathematical-formula" title="Permanent link">&para;</a></h2>
+<p>We can use LaTeX to write mathematical equations in Markdown. To write
+inline LaTeX formula use a single <code>$</code> before and after the equation and
+use a double <code>$</code> to display equations.</p>
+<hr />
+<h1 id="latex">LaTeX<a class="headerlink" href="#latex" title="Permanent link">&para;</a></h1>
+<p>The following provides a quick reference of the most commonly used LaTeX
+syntax. You may find a more extensive references about mathematical
+formulas at <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX
+Wikibooks</a>.</p>
+<h2 id="latex-equations">LaTeX equations<a class="headerlink" href="#latex-equations" title="Permanent link">&para;</a></h2>
+<p>Inline equation: [\(equation\)]{.math .inline}</p>
+<p>::: {#cb20 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">Inline equation: $equation$
+</code></pre>
+<p>:::</p>
+<p>Display equation: [\[equation\]]{.math .display}</p>
+<p>::: {#cb21 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">Display equation: $$equation$$
+</code></pre>
+<p>:::</p>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[\(x + y\)]{.math .inline}</li>
+<li>[\(x - y\)]{.math .inline}</li>
+<li>[\(x \times y\)]{.math .inline}</li>
+<li>[\(x \div y\)]{.math .inline}</li>
+<li>[\(\dfrac{x}{y}\)]{.math .inline}</li>
+<li>[\(\sqrt{x}\)]{.math .inline}</li>
+</ul>
+<p>::: {#cb22 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">- $x + y$
+- $x - y$
+- $x \times y$ 
+- $x \div y$
+- $\dfrac{x}{y}$
+- $\sqrt{x}$
+</code></pre>
+<p>:::</p>
+<h2 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[\(\pi \approx 3.14159\)]{.math .inline}</li>
+<li>[\(\pm \, 0.2\)]{.math .inline}</li>
+<li>[\(\dfrac{0}{1} \neq \infty\)]{.math .inline}</li>
+<li>[\(0 \&lt; x \&lt; 1\)]{.math .inline}</li>
+<li>[\(0 \leq x \leq 1\)]{.math .inline}</li>
+<li>[\(x \geq 10\)]{.math .inline}</li>
+<li>[\(\forall \, x \in (1,2)\)]{.math .inline}</li>
+<li>[\(\exists \, x \notin [0,1]\)]{.math .inline}</li>
+<li>[\(A \subset B\)]{.math .inline}</li>
+<li>[\(A \subseteq B\)]{.math .inline}</li>
+<li>[\(A \cup B\)]{.math .inline}</li>
+<li>[\(A \cap B\)]{.math .inline}</li>
+<li>[\(X \implies Y\)]{.math .inline}</li>
+<li>[\(X \impliedby Y\)]{.math .inline}</li>
+<li>[\(a \to b\)]{.math .inline}</li>
+<li>[\(a \longrightarrow b\)]{.math .inline}</li>
+<li>[\(a \Rightarrow b\)]{.math .inline}</li>
+<li>[\(a \Longrightarrow b\)]{.math .inline}</li>
+<li>[\(a \propto b\)]{.math .inline}</li>
+</ul>
+<p>::: {#cb23 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">- $\pi \approx 3.14159$
+- $\pm \, 0.2$
+- $\dfrac{0}{1} \neq \infty$
+- $0 &lt; x &lt; 1$
+- $0 \leq x \leq 1$
+- $x \geq 10$
+- $\forall \, x \in (1,2)$
+- $\exists \, x \notin [0,1]$
+- $A \subset B$
+- $A \subseteq B$
+- $A \cup B$
+- $A \cap B$
+- $X \implies Y$
+- $X \impliedby Y$
+- $a \to b$
+- $a \longrightarrow b$
+- $a \Rightarrow b$
+- $a \Longrightarrow b$
+- $a \propto b$
+</code></pre>
+<p>:::</p>
+<ul>
+<li>[\(\bar a\)]{.math .inline}</li>
+<li>[\(\tilde a\)]{.math .inline}</li>
+<li>[\(\breve a\)]{.math .inline}</li>
+<li>[\(\hat a\)]{.math .inline}</li>
+<li>[\(a\^ \prime\)]{.math .inline}</li>
+<li>[\(a\^ \dagger\)]{.math .inline}</li>
+<li>[\(a\^ \ast\)]{.math .inline}</li>
+<li>[\(a\^ \star\)]{.math .inline}</li>
+<li>[\(\mathcal A\)]{.math .inline}</li>
+<li>[\(\mathrm a\)]{.math .inline}</li>
+<li>[\(\cdots\)]{.math .inline}</li>
+<li>[\(\vdots\)]{.math .inline}</li>
+<li>[\(\#\)]{.math .inline}</li>
+<li>[\(\$\)]{.math .inline}</li>
+<li>[\(\%\)]{.math .inline}</li>
+<li>[\(\&amp;\)]{.math .inline}</li>
+<li>[\(\{ \}\)]{.math .inline}</li>
+<li>[\(\_\)]{.math .inline}</li>
+</ul>
+<p>::: {#cb24 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">- $\bar a$
+- $\tilde a$
+- $\breve a$
+- $\hat a$
+- $a^ \prime$
+- $a^ \dagger$
+- $a^ \ast$
+- $a^ \star$
+- $\mathcal A$
+- $\mathrm a$
+- $\cdots$
+- $\vdots$
+- $\#$
+- $\$$
+- $\%$
+- $\&amp;$
+- $\{ \}$
+- $\_$
+</code></pre>
+<p>:::</p>
+<h2 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Horizontal space: <code>\quad</code></li>
+<li>Large horizontal space: <code>\qquad</code></li>
+<li>Small space: <code>\,</code></li>
+<li>Medium space: <code>\:</code></li>
+<li>Large space: <code>\;</code></li>
+<li>Negative space: <code>\!</code></li>
+</ul>
+<h2 id="greek-alphabets">Greek alphabets<a class="headerlink" href="#greek-alphabets" title="Permanent link">&para;</a></h2>
+<p>::: {style="margin-bottom: 1rem; overflow-x: auto;"}
+  Small Letter                                  Capital Letter                                Alternative</p>
+<hr />
+<p>[\(\alpha\)]{.math .inline} <code>\alpha</code>       [\(A\)]{.math .inline} <code>A</code>                <br />
+  [\(\beta\)]{.math .inline} <code>\beta</code>         [\(B\)]{.math .inline} <code>B</code>                <br />
+  [\(\gamma\)]{.math .inline} <code>\gamma</code>       [\(\Gamma\)]{.math .inline} <code>\Gamma</code>     <br />
+  [\(\delta\)]{.math .inline} <code>\delta</code>       [\(\Delta\)]{.math .inline} <code>\Delta</code>     <br />
+  [\(\epsilon\)]{.math .inline} <code>\epsilon</code>   [\(E\)]{.math .inline} <code>E</code>                  [\(\varepsilon\)]{.math .inline} <code>\varepsilon</code>
+  [\(\zeta\)]{.math .inline} <code>\zeta</code>         [\(Z\)]{.math .inline} <code>Z</code>                <br />
+  [\(\eta\)]{.math .inline} <code>\eta</code>           [\(H\)]{.math .inline} <code>H</code>                <br />
+  [\(\theta\)]{.math .inline} <code>\theta</code>       [\(\Theta\)]{.math .inline} <code>\Theta</code>       [\(\vartheta\)]{.math .inline} <code>\vartheta</code>
+  [\(\iota\)]{.math .inline} <code>\zeta</code>         [\(I\)]{.math .inline} <code>I</code>                <br />
+  [\(\kappa\)]{.math .inline} <code>\kappa</code>       [\(K\)]{.math .inline} <code>K</code>                  [\(\varkappa\)]{.math .inline} <code>\varkappa</code>
+  [\(\lambda\)]{.math .inline} <code>\lambda</code>     [\(\Lambda\)]{.math .inline} <code>\Lambda</code>   <br />
+  [\(\mu\)]{.math .inline} <code>\mu</code>             [\(M\)]{.math .inline} <code>M</code>                <br />
+  [\(\nu\)]{.math .inline} <code>\nu</code>             [\(N\)]{.math .inline} <code>N</code>                <br />
+  [\(\xi\)]{.math .inline} <code>\xi</code>             [\(\Xi\)]{.math .inline} <code>\Xi</code>           <br />
+  [\(\omicron\)]{.math .inline} <code>\omicron</code>   [\(O\)]{.math .inline} <code>O</code>                <br />
+  [\(\pi\)]{.math .inline} <code>\pi</code>             [\(\Pi\)]{.math .inline} <code>\Pi</code>             [\(\varpi\)]{.math .inline} <code>\varpi</code>
+  [\(\rho\)]{.math .inline} <code>\rho</code>           [\(P\)]{.math .inline} <code>P</code>                  [\(\varrho\)]{.math .inline} <code>\varrho</code>
+  [\(\sigma\)]{.math .inline} <code>\sigma</code>       [\(\Sigma\)]{.math .inline} <code>\Sigma</code>       [\(\varsigma\)]{.math .inline} <code>\varsigma</code>
+  [\(\tau\)]{.math .inline} <code>\tau</code>           [\(T\)]{.math .inline} <code>T</code>                <br />
+  [\(\upsilon\)]{.math .inline} <code>\upsilon</code>   [\(\Upsilon\)]{.math .inline} <code>\Upsilon</code> <br />
+  [\(\phi\)]{.math .inline} <code>\phi</code>           [\(\Phi\)]{.math .inline} <code>\Phi</code>           [\(\varphi\)]{.math .inline} <code>\varphi</code>
+  [\(\chi\)]{.math .inline} <code>\chi</code>           [\(X\)]{.math .inline} <code>X</code>                <br />
+  [\(\psi\)]{.math .inline} <code>\psi</code>           [\(\Psi\)]{.math .inline} <code>\Psi</code>         <br />
+  [\(\omega\)]{.math .inline} <code>\omega</code>       [\(\Omega\)]{.math .inline} <code>\Omega</code>     <br />
+:::</p>
+<h2 id="equations">Equations<a class="headerlink" href="#equations" title="Permanent link">&para;</a></h2>
+<p>[\[\mathbb{N} = \{ a \in \mathbb{Z} : a &gt; 0 \}\]]{.math
+.display}</p>
+<p>::: {#cb25 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\mathbb{N} = \{ a \in \mathbb{Z} : a &gt; 0 \}$$
+</code></pre>
+<p>:::</p>
+<p>[\[\forall \; x \in X \quad \exists \; y \leq
+\epsilon\]]{.math .display}</p>
+<p>::: {#cb26 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\forall \; x \in X \quad \exists \; y \leq \epsilon$$
+</code></pre>
+<p>:::</p>
+<p>[\[\color{blue}{X \sim Normal \; (\mu,\sigma\^2)}\]]{.math
+.display}</p>
+<p>::: {#cb27 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\color{blue}{X \sim Normal \; (\mu,\sigma^2)}$$
+</code></pre>
+<p>:::</p>
+<p>[\[P \left( A=2 \, \middle| \, \dfrac{A\^2}{B}&gt;4
+\right)\]]{.math .display}</p>
+<p>::: {#cb28 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$P \left( A=2 \, \middle| \, \dfrac{A^2}{B}&gt;4 \right)$$
+</code></pre>
+<p>:::</p>
+<p>[\[f(x) = x\^2 - x\^\frac{1}{\pi}\]]{.math .display}</p>
+<p>::: {#cb29 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$f(x) = x^2 - x^\frac{1}{\pi}$$
+</code></pre>
+<p>:::</p>
+<p>[\[f(X,n) = X_n + X_{n-1}\]]{.math .display}</p>
+<p>::: {#cb30 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$f(X,n) = X_n + X_{n-1}$$
+</code></pre>
+<p>:::</p>
+<p>[\[f(x) = \sqrt[3]{2x} + \sqrt{x-2}\]]{.math .display}</p>
+<p>::: {#cb31 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$f(x) = \sqrt[3]{2x} + \sqrt{x-2}$$
+</code></pre>
+<p>:::</p>
+<p>[\[\mathrm{e} = \sum_{n=0}\^{\infty} \dfrac{1}{n!}\]]{.math
+.display}</p>
+<p>::: {#cb32 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\mathrm{e} = \sum_{n=0}^{\infty} \dfrac{1}{n!}$$
+</code></pre>
+<p>:::</p>
+<p>[\[\prod_{i=1}\^{n} x_i - 1\]]{.math .display}</p>
+<p>::: {#cb33 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\prod_{i=1}^{n} x_i - 1$$
+</code></pre>
+<p>:::</p>
+<p>[\[\lim_{x \to 0\^+} \dfrac{1}{x} = \infty\]]{.math .display}</p>
+<p>::: {#cb34 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\lim_{x \to 0^+} \dfrac{1}{x} = \infty$$
+</code></pre>
+<p>:::</p>
+<p>[\[\int_a\^b y \: \mathrm{d}x\]]{.math .display}</p>
+<p>::: {#cb35 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\int_a^b y \: \mathrm{d}x$$
+</code></pre>
+<p>:::</p>
+<p>[\[\log_a b = 1\]]{.math .display}</p>
+<p>::: {#cb36 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\log_a b = 1$$
+</code></pre>
+<p>:::</p>
+<p>[\[\min(P) = \max_{i:S_i \in S} S_i\]]{.math .display}</p>
+<p>::: {#cb37 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\max(S) = \max_{i:S_i \in S} S_i$$
+</code></pre>
+<p>:::</p>
+<p>[\[\dfrac{n!}{k!(n-k)!} = \binom{n}{k}\]]{.math .display}</p>
+<p>::: {#cb38 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\dfrac{n!}{k!(n-k)!} = \binom{n}{k}$$
+</code></pre>
+<p>:::</p>
+<p>[\[\small \text{$\dfrac{b}{a+b}=3, \:$ therefore we can set
+$\: a=6$}\]]{.math .display}</p>
+<p>::: {#cb39 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\text{$\dfrac{b}{a+b}=3, \:$ therefore we can set $\: a=6$}$$
+</code></pre>
+<p>:::</p>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<p>[\[ f(x)= \begin{cases} 1/d_{ij} &amp; \quad \text{when $d_{ij}
+\leq 160$}\\ 0 &amp; \quad \text{otherwise} \end{cases} \]]{.math
+.display}</p>
+<p>::: {#cb40 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$
+f(x)=
+\begin{cases}
+1/d_{ij} &amp; \quad \text{when $d_{ij} \leq 160$}\\ 
+0 &amp; \quad \text{otherwise}
+\end{cases}
+$$
+</code></pre>
+<p>:::</p>
+<h2 id="matrices">Matrices<a class="headerlink" href="#matrices" title="Permanent link">&para;</a></h2>
+<p>[\[ \begin{matrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9
+\end{matrix} \]]{.math .display}</p>
+<p>::: {#cb41 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$
+\begin{matrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{matrix}
+$$
+</code></pre>
+<p>:::</p>
+<p>[\[ M = \begin{bmatrix} \frac{5}{6} &amp; \frac{1}{6} &amp; 0 \\[0.3em]
+\frac{5}{6} &amp; 0 &amp; \frac{1}{6} \\[0.3em] 0 &amp; \frac{5}{6} &amp;
+\frac{1}{6} \end{bmatrix} \]]{.math .display}</p>
+<p>::: {#cb42 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$
+M = 
+\begin{bmatrix}
+\frac{5}{6} &amp; \frac{1}{6} &amp; 0 \\[0.3em]
+\frac{5}{6} &amp; 0 &amp; \frac{1}{6} \\[0.3em]
+0 &amp; \frac{5}{6} &amp; \frac{1}{6}
+\end{bmatrix}
+$$
+</code></pre>
+<p>:::</p>
+<p>[\[ M = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} \]]{.math .display}</p>
+<p>::: {#cb43 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$ 
+M =
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+$$
+</code></pre>
+<p>:::</p>
+<p>[\[ M = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
+\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \]]{.math .display}</p>
+<p>::: {#cb44 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$ 
+M =
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}
+$$
+</code></pre>
+<p>:::</p>
+<p>[\[ A_{m,n} = \begin{pmatrix} a_{1,1} &amp; a_{1,2} &amp; \cdots &amp;
+a_{1,n} \\ a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} \\ \vdots &amp;
+\vdots &amp; \ddots &amp; \vdots \\ a_{m,1} &amp; a_{m,2} &amp; \cdots &amp;
+a_{m,n} \end{pmatrix} \]]{.math .display}</p>
+<p>::: {#cb45 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$
+A_{m,n} = 
+\begin{pmatrix}
+a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,n} \\
+a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n} 
+\end{pmatrix}
+$$
+</code></pre>
+<p>:::</p>
+<h2 id="font-sizes">Font sizes<a class="headerlink" href="#font-sizes" title="Permanent link">&para;</a></h2>
+<p>[\(\Huge Hello!\)]{.math .inline}\
+[\(\huge Hello!\)]{.math .inline}\
+[\(\LARGE Hello!\)]{.math .inline}\
+[\(\Large Hello!\)]{.math .inline}\
+[\(\large Hello!\)]{.math .inline}\
+[\(\normalsize Hello!\)]{.math .inline}\
+[\(\small Hello!\)]{.math .inline}\
+[\(\scriptsize Hello!\)]{.math .inline}\
+[\(\tiny Hello!\)]{.math .inline}\</p>
+<p>::: {#cb46 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$\Huge Hello!$
+$\huge Hello!$
+$\LARGE Hello!$
+$\Large Hello!$
+$\large Hello!$
+$\normalsize Hello!$
+$\small Hello!$
+$\scriptsize Hello!$
+$\tiny Hello!$
+</code></pre>
+<p>:::</p>
+<p>Example: [\[\small \text{Font size is small, eg. $\sum{x_i =
+10}$}\]]{.math .display}</p>
+<p>::: {#cb47 .sourceCode}</p>
+<pre class="markdown"><code class="language-sourceCode">$$\small \text{Font size is small, eg. $\sum{x_i = 10}$}$$
+</code></pre>
+<p>:::
+:::</p>
+<p>::: {.d-none .d-xl-block .col-xl-2 .bd-toc}
+-   -   <a href="#markdown">Markdown</a>
+        -   <a href="#headers">Headers</a>
+        -   <a href="#emphasis">Emphasis</a>
+        -   <a href="#lists">Lists</a>
+        -   <a href="#links">Links</a>
+        -   <a href="#images">Images</a>
+        -   <a href="#quotes">Quotes</a>
+        -   <a href="#hlines">Hlines</a>
+        -   <a href="#tables">Tables</a>
+        -   <a href="#code-blocks">Code blocks</a>
+        -   <a href="#yaml-header">YAML header</a>
+        -   <a href="#mathematical-formula">Mathematical formula</a>
+    -   <a href="#latex">LaTeX</a>
+        -   <a href="#latex-equations">LaTeX equations</a>
+        -   <a href="#operators">Operators</a>
+        -   <a href="#symbols">Symbols</a>
+        -   <a href="#space">Space</a>
+        -   <a href="#greek-alphabets">Greek alphabets</a>
+        -   <a href="#equations">Equations</a>
+        -   <a href="#functions">Functions</a>
+        -   <a href="#matrices">Matrices</a>
+        -   <a href="#font-sizes">Font sizes</a></p>
+<p>:::</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
