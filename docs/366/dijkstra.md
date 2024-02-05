@@ -3,7 +3,7 @@ lang: en
 title: Dijkstra
 viewport: width=device-width, initial-scale=1.0
 ---
-# Algorithm
+## Algorithm
 ```python
 def dijkstra(s0, sg, T):
     OPEN.append(s0)
@@ -24,9 +24,16 @@ def dijkstra(s0, sg, T):
                 heapify OPEN
 ```
 
-# Details
+## Details
 The main function if the inner loop has two parts:
 - if the child wasn't in the CLOSED list (if we haven't seen it before). Then
 add it to the CLOSED list.
 - if that child has a cheaper cost than the current version in the CLOSED list,
 then update it to that value. 
+
+## Definitions
+g(node): gets the code from the start to the node.
+
+g_value: the cost to travel from the start to the node.
+
+T(node): gets the children of a node.

@@ -1,4 +1,4 @@
 # Topics
-- [Algebraic Tricks](algebraicTricks)
-- [Sequences](sequences)
-- [Sequences and Limits](sequence_limits)
+- [Algebraic Tricks](algebraicTricks.md)
+- [Sequences](sequences.md)
+- [Sequences and Limits](sequence_limits.md)

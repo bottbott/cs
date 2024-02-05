@@ -66,4 +66,7 @@ $$
 
 ## Limit
 
-## Convergences
+### Convergence
+The property of convergence relates to a sequence as it tends to infinity and
+whether the value of \(a_n\) seems to go to a certain stable value. If that is 
+not the case, then the sequence diverges. 
