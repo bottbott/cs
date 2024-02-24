@@ -1,6 +1,6 @@
 ---
 lang: en
-title: Series
+title: Special Series
 viewport: width=device-width, initial-scale=1.0
 ---
 ## Geometric Series

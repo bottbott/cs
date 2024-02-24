@@ -68,7 +68,11 @@ then the XOR'd block is passed into the encryption function.
 
 In the opposite fashion, the cipher text block is passed to the decryption 
 function and that output must be XOR'd with the previous cipher text block to
-then recover the original plain text. 
+then recover the original plain text.
+
+### Output Feedback (block)
+
+### Cipher Feedback (block)
 
 ### Counter Mode
 
