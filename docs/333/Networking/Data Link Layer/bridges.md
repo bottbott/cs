@@ -35,7 +35,7 @@ Each of the interfaces on a device (ethernet port, wifi port, bluetooth port,
 etc) will have its own addresse, so device may have multiple addresses. 
 
 ## Backward Learning Bridges
-Bridges broadcast by default at start up. As they receive traffic from hosts
+Bridges broadcast by default at start up. As they receive frames from hosts
 they learn which segment that host is on. This is stored in a forwarding table. 
 If the destination address is not known, then the frame must be broadcast to
 all segments on the bridge.
@@ -63,3 +63,12 @@ sending spoofed source and destination MAC addresses. The spoofed source
 addresses will eventually cause the forwarding table to lose its existing 
 entries, and the spoofed destination addresses will mean the frame will need
 to be broadcasted to all of the segments.
+
+### Eavesdropping
+If you are on the same segment as the host you wish to eavedrop on, then you
+only need to set your device to promiscuous mode to receive any traffic, and
+if you want to see traffic from other segments, then you can also do a similar
+attack to the above to flush the forwarding table. 
+
+### Impersonation
+You can change your MAC address to pretend to be a different host. 
