@@ -1,6 +1,5 @@
 ---
 lang: en
-title: CMPUT 366 Notes
+title: Definitions
 viewport: width=device-width, initial-scale=1.0
 ---
-- [Ciphers](ciphers.md)
