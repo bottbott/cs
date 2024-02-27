@@ -3,7 +3,7 @@ lang: en
 title: A* Search
 viewport: width=device-width, initial-scale=1.0
 ---
-A* Search is an improvement on [Dijkstra's algorithm](dijkstra.md#Algorithm) to help increase the speed
+A* Search is an improvement on [Dijkstra's algorithm](../Uninformed%20Search/dijkstra.md#Algorithm) to help increase the speed
 of the search by creating a focused search frontier. 
 
 The priority queue receives a different cost value. Dijkstra's algorithm only

@@ -73,10 +73,28 @@ If the series is convergent, but the absolute series is not, then it is called
 
 ## General Test Strategy
 ### Check for divergence
+For a series to converge, the terms of the sequence must approach zero; 
+otherwise, the series will continue to grow and will be divergent. To check for
+this we will take the limit of the sequence and see if it is zero. If it is,
+then it's possible that the series may converge, if it does not equal zero then
+the series definietely diverges. 
 ### Check for type of series
 #### Harmonic series
+We know harmonic series are divergent.
 #### Hyperharmonic (p-series) 
+We know hyperharmonic or p-series are convergent.
 #### Geometric series
+Geometric series will converge under special conditions.
+A geometric series \(\sum_{n=0}^{\infty} ar^n\) will:
+
+- Converge if the common ratio, \(|r| < 1\). The sum of the series in this case is given by:
+    - \( S = \frac{a}{1 - r} \) where \(S\) is the sum of the series, \(a\) is 
+    the first term, and \(r\) is the common ratio.
+
+- Diverge if the common ratio, \(|r| \geq 1\). This includes:
+    - \(r = 1\), where the series becomes \(\sum_{n=0}^{\infty} a\) which clearly diverges as it sums to infinity.
+    - \(r > 1\) or \(r \leq -1\), where the terms of the series grow without bound in absolute value.
+
 #### Telescoping series
 ### Descending and positive
 ### Evaluate limit of ratio or root
