@@ -21,6 +21,9 @@ $$
 ### Second preimage resistance
 If I have some message, its very hard to find another message so that their
 hashes are equal. 
+$$
+h(m) = h(m')
+$$
 
 ### Collision resistance
 Two hashes may result from two different messages, but it is very very very 
@@ -57,7 +60,7 @@ The hash must have strong preimage resistance so that if an attacker were to
 gain access to a hash they would not be able to derive the password.
 
 ## Hashing in Signatures
-Collision resistance is essentially when hashing is used to produce a tag for
+Collision resistance is essential when hashing is used to produce a tag for
 signing. If this property fails, then more than one person could be a valid
 sender for a signed file which would mean non-repudiation could not be 
 guaranteed. 
@@ -67,6 +70,10 @@ Salts are added to hashes to increase their complexity. This makes a brute
 force attack that much less likely to succeed. The user themselves don't need
 to know the salt, and it can be stored at the host side (wouldn't be effective
 anymore if it was leaked). 
+
+The salts are stored as plaintext in the server database, and their function is 
+to make it more difficult to guess the passwords by basically make them more 
+complex. 
 
 ## Pepper
 Pepper is a version of salt that is not stored. Instead it is generated from 
