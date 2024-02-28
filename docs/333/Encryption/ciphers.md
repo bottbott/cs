@@ -58,6 +58,12 @@ One of the benefits of this approach is that even if one of the blocks is lost
 we can still recover most of the message. When we look at the other chaining 
 methods, we see they are not so lucky.
 
+$$
+\begin{align*}
+c_i &= E_k(m_i) & m_i &= D_k(c_i)
+\end{align*}
+$$
+
 ### Cipher Block Chaining (block)
 The **chaining** part of the name indicates that the input and output are 
 connected in some way. 
@@ -70,9 +76,43 @@ In the opposite fashion, the cipher text block is passed to the decryption
 function and that output must be XOR'd with the previous cipher text block to
 then recover the original plain text.
 
+Because the ciphertext is used during decryption it will affect the current 
+block and the next block.
+
+$$
+\begin{align*}
+c_i &= E_k(m_i \oplus c_{i-1}) & m_i &= D_k(c_i) \oplus c_{i-1}
+\end{align*}
+$$
+!!! note
+    Needs an Initialization Vector to start. 
+
 ### Output Feedback (block)
+For Output Feedback, the output of the encryption function 
+can be precomputed ahead of time. For Output Feedback these outputs are passed 
+to the next encryption block before being XORd with the plaintext to produce 
+the ciphertext.
+
+$$
+\begin{align*}
+c_i &= m_i \oplus E_k^{i}(\text{IV}) & m_i &= c_i \oplus E_k^{i}(\text{IV})
+\end{align*}
+$$
+!!! note
+    Initialization vector is required.
 
 ### Cipher Feedback (block)
+For Cipher Feedback these outputs are first
+XORd with the plaintext message to produce the cipher text and then also used
+as input to the next encryption call
+
+$$
+\begin{align*}
+c_i &= m_i \oplus E_k(c_{i-1}) & m_i &= c_i \oplus E_k(c_{i-1})
+\end{align*}
+$$
+!!! note
+    Initialization vector is required.
 
 ### Counter Mode
 

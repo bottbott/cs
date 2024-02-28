@@ -30,6 +30,40 @@ sequenceDiagram
     Note right of Server: SEQ will eventually wrap around.
 ```
 
+## SYN Cookie
+In the weaknesses listed below, we mention that the server must allocate space 
+during the handshake process and that this exposes an attack vector for a large 
+number of attacks to deplete the space on the server. 
+
+SYN Cookies are an approach to make the connection stateless so that the server 
+can not be exhausted. The server encodes state information when it responds to 
+the clients SYN request. 
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+
+    Note over C,S: TCP Three-Way Handshake with SYN Cookies
+
+    C->>S: SYN, CSEQ (Client initiates connection)
+    Note over S: Server calculates SYN cookie: time, max segment size,<br/>and hash of (client's IP, port, server IP, port, and a timestamp)
+    S->>C: SYN, ACK, CSEQ+1, SSEQ<br/>(Server responds with SYN cookie as sequence number)
+    Note right of S: Server does not store any<br/>connection state.
+
+    Note over C: Client increments the SSEQ number.
+    C->>S: ACK, SSEQ+1, CSEQ+1 (Client acknowledges, includes SYN cookie)
+    Note over S: Server verifies SYN cookie.
+    Note right of S: If valid, server reconstructs<br/>connection state and proceeds.
+
+    Note over S,C: Connection Established
+```
+
+When the server does receive the packet, it can inspect the time embedded in 
+the cookie to see if the cookie has expired, and it can recompute the hash of 
+the IPs/ports/time. 
+
+
 ## Weaknesses
 ### Handshake allocates state space at destination
 Whenever the TCP handshake is initiated the destination will set aside some 
