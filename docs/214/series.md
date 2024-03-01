@@ -63,14 +63,32 @@ If the series is convergent, but the absolute series is not, then it is called
 
 ## Tests
 ### Divergency Test
+It is impossible for a series to converge if the sequence of the terms does not
+approach 0. For example, if it approaches 1, then every term we continue to add
+in the series will continue to increase and the limit of the series won't 
+settle down. 
+
+$$
+\lim\limits_{n \to \infty} a_n \neq 0 \rightarrow \sum a_n \text{ will diverge}
+$$
+
+The ratio test, root test, integral test could be used as well to show divergence. 
+
+#### Application
+Take the limit of the sequence. 
+
 ### Integral Test
+Show decreasing.
 ### Comparison Test
+What's bigger than it. 
 ### Limit Comparison Test
+Show decreasing.
 ### Alternating Series Test
 ### Ratio Test
-
+Tend to be used when we see factorials or things to the power of n 
+Shows absolute convegence.
 ### Root Test
-
+Shows absolute convegence.
 ## General Test Strategy
 ### Check for divergence
 For a series to converge, the terms of the sequence must approach zero; 

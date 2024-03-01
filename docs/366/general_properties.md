@@ -19,6 +19,9 @@ Suboptimal algorithms will be useful to us when an optimal algorithm exists,
 but its implementation is too costly. 
 
 ## Space Complexity
-
+Search algorithms need to open up nodes as they explore their neighbours and 
+this takes up space. See the branching diagram on the [main page](index.md).
 
 ## Time Complexity
+The amount of time it will take us to search also depends on the number of 
+nodes that are opened up/expanded. See the same branching diagram. 

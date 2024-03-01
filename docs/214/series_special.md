@@ -8,8 +8,15 @@ A geometric series is the summation of increasingly diminishing terms. $ a $ is
 the first term of the sequence, and $ r $ is the common ratio of the series.
 
 $$
-S = \sum_{n=1}^{\infty} ar^n = a + ar + ar^2 + ar^3 + ...
+S = \sum_{n=1}^{\infty} ar^{n-1} = a + ar + ar^2 + ar^3 + ...
 $$
+
+The sum of a convergent geometric series is:
+
+$$
+S = a_1 \cdot \frac{1 - q^n}{1 -  q}
+$$
+
 ![Geometric Series](geometricSeries.png)
 
 ## Harmonic Series
