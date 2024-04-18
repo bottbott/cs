@@ -23,3 +23,11 @@ are three simplifications that can be made to find a simpler heuristic:
 
 ## Subgoal Tree for $ h^{max} $ and $ h^{add} $
 ![alt text](subgoalTree.png)
+
+### General Idea
+We take our goal state and make that our root node, and then from there we 
+expand to the subgoals. We expand the sub goals of those subgoals, until we 
+reach the base case where we are at a terminal node which is contained within
+our initial state. Most expansions should have another node which represents 
+the cost of reaching that subgoal from its parent. Then we either take the 
+maximum or sum of these costs to get our heuristic value at each parent node
