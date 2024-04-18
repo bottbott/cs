@@ -32,3 +32,10 @@ the heuristic rather than the cost back to the start (g value).
 $$
 f(s) = g(s) + w \dot h(s) \quad w > 1
 $$
+
+## AStar Nuances
+A* can run out of memory when the state space is very large. In these instances
+we can use a technique called iterative deepening A* (IDA*). This is similar to
+iterative deepening depth-first search. Iterative algorithms suffer from 
+transpositions, and so we need to keep track of them using a transposition 
+table. 
