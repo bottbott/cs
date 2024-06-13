@@ -65,7 +65,7 @@ The createApp method takes an object as an argument where it contains the data a
 
 #### computed
 
-Computed properties can be helpful to limit the amount of logic that is used in our HTML code.
+Computed properties can be helpful to limit the amount of logic that is used in our HTML code.<
 
 #### watch
 

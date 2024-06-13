@@ -93,3 +93,11 @@ Undoes all of the changes between HEAD and the commit, and discards the changes.
 ```bash
 git reset --hard HEAD~1
 ```
+
+## Finding Commits
+
+We can find all of the commits for a given file by using the `--follow` option.
+
+```bash
+git log --follow --oneline -- filename
+```
