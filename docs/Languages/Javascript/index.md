@@ -1,10 +1,22 @@
 ## Arrays
 
-### reduce
+#### Iteration methods
 
-### map
+#### reduce
 
-### filter
+#### map
+
+#### filter
+
+#### some
+
+Some returns true if at least one element in the array passes the test implemented by the provided function.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const hasEven = numbers.some((number) => number % 2 === 0);
+console.log(hasEven); // true
+```
 
 ### splice
 
