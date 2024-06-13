@@ -2,6 +2,39 @@
 
 Refine later. Capturing some possible concepts.
 
+## ROUGH IDEAS
+ref attribute: can be added to html elements to reference them in the DOM. We can use these references to access the element in the Vue instance as `this.$refs.refName`.
+
+virtual dom: Vue needs to know when to update the DOM, but reading the whole DOM is expensive. A virtual DOM is maintained by Vue and we compare to an old version of the virtual DOM to see what has changed. Then if differences are detected we update the parts in the real DOM where the change occurred.
+
+vue lifecycle hooks
+
+```mermaid
+graph TD
+    A[createApp({ ... })] --> B[beforeCreate()]
+    B --> C[created()]
+    C --> D[beforeMount()]
+    D --> E[mounted()]
+    C --> F[Compile template]
+    F --> D
+    E --> G[Mounted Vue Instance]
+```
+
+```mermaid
+graph TD
+    A[Mounted Vue Instance] --> B[Data Changed]
+    B --> C[beforeUpdate()]
+    C --> D[updated()]
+```
+
+```mermaid
+graph TD
+    A[Mounted Vue Instance] --> B[beforeUnmount()]
+    B --> C[unmounted()]
+    C --> D[Instance Unmounted]
+```
+
+
 ## Instantiating a Vue App
 
 ```javascript
