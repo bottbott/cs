@@ -101,3 +101,11 @@ We can find all of the commits for a given file by using the `--follow` option.
 ```bash
 git log --follow --oneline -- filename
 ```
+
+## Finding something in commits by string search
+
+```bash
+git log -S"<<string to search for>>" --since="2 years ago" --until="now" -- /path/to/the/file
+```
+
+--since and --until can be specified as a date, or a relative date like "2 years ago".
