@@ -33,6 +33,56 @@ graph TD
     B --> C[unmounted()]
     C --> D[Instance Unmounted]
 ```
+Stuff to write about:
+sending info between comoponents
+parent to child
+props:
+child to parent
+emits:
+provide/inject: 
+
+dollar methods
+$emit: sends an event to the parent component
+
+prop fallthrough: 
+
+binding all props
+
+Emitting Passthrough
+Sometimes the child component may need to communicate to it's ancestor component that is several layers removed. We can use the $emit method to send an event to the parent component and then another event to the parent's parent component and so on. 
+
+Provide and Inject for Values and Methods
+As an alternative to manually passing emits up the chain, we can use the provide and inject method to pass values directly from the descdendant to the ancestor. This is helpful because we don't have to worry about the relations inbetween, but it can be difficult to debug because the values are not directly passed.
+
+Global vs Local Components
+Components can be defined and exposed in the main app which makes the available globally everywhere within the hierarchy of the application, but it can be hard for Vue to determine what components are unused via it's "tree-shaking" approach. It also makes dependency relationships between components much less explicit which can make it harder for developers to maintain the codebase.
+
+Alternatively we can include components locally within the components that use them. This helps address the two issues mentioned above, but it takes away the ease of use that globally defined components provide.
+
+Scoped Style
+Unscoped style is applied globally to any matching tag. We can use the `scoped` attribute to limit the style to the component that it is defined in.
+
+Slots
+Slots allow us to pass through HTML/Vue content to a component. They are somewhat like a prop, but instead of passing a value, we are passing HTML content. 
+
+default/named
+Slot content is automatically targetted to the default slot unless we specify a named slot. In the slot, we can use the `v-slot` directive, or the shorthand `#` to specify the slot name.
+
+$slots
+Vue exposes a $slots object that contains the content of the slots. This value can be used programmatically to determine how to render the content.
+
+scoped slots
+Sometimes we will want a way to pass data from the parent component to the slot content. We can use scoped slots to pass data from the parent to the slot content.
+
+Dynamic components
+<component> tag
+We can use the `<component>` tag to dynamically render whatever component we wish to display. This lets us get around a series of v-if statements to determine which component to display.
+
+<keep-alive> tag
+The `<keep-alive>` tag can be used in conjunction with the component tag so that we can keep the component in memory and not have to re-render it every time it is displayed. Without it, the component would be destroyed and recreated every time it is displayed.
+
+<teleport> tag
+The `<teleport>` tag allows us to move an element to a different part of the DOM. This can be helpful when we want to render a component in a different part of the DOM than where it is defined. Typically this could be used to help maintain a consistent and semantically correct DOM structure which can be very important to accessibility.
 
 
 ## Instantiating a Vue App
