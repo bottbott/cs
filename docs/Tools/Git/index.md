@@ -16,7 +16,7 @@ git commit --fixup <commit>
 
 ## Reword
 
-Change the commit message of the last commit.
+Change the commit message of the last commit. Use `git rebase --continue` when done.
 
 ```bash
 git rebase -i HEAD~2 # operate on the last two commits
@@ -102,6 +102,12 @@ We can find all of the commits for a given file by using the `--follow` option.
 git log --follow --oneline -- filename
 ```
 
+Find changes to a file at a line over commits.
+
+```bash
+git log -L 1,1:filename
+```
+
 ## Finding something in commits by string search
 
 ```bash
@@ -109,3 +115,17 @@ git log -S"<<string to search for>>" --since="2 years ago" --until="now" -- /pat
 ```
 
 --since and --until can be specified as a date, or a relative date like "2 years ago".
+
+## Merging
+
+Often run into divergent branch issues and need to resolve with rebasing or fast forwarding. What do each of these options mean?
+
+### Fast Forward
+
+### Rebase
+
+Change the base of the development branch to the branch we are merging into.
+
+### Merge
+
+Pulls in the latest changes from the branch you are merging into and creates a merge commit.
