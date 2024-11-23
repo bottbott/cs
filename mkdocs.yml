@@ -6,7 +6,7 @@ theme:
     - navigation.indexes
     - navigation.footer
 
-dev_addr: '127.0.0.1:8081'
+dev_addr: '127.0.0.1:1234'
 
 markdown_extensions:
   - admonition
