@@ -1,0 +1,73 @@
+# CMPUT 402
+
+## Topics
+
+- [ ] first lecture
+    - software quality
+    - definitions
+        - mccall
+        - boehm
+        - 25010
+- [x] black box testing
+    - test values
+        - boundary value testing
+        - boundary value analysis
+        - robustness testing
+        - partition testing
+    - finite state machines
+    - fuzz testing
+- [x] white box testing
+    - statement coverage
+    - control flow graphs
+    - branch coverage
+    - "subsume"
+    - condition coverage
+    - branch and condition coverage
+    - (MC/DC) modified conditoin/decision coverage
+    - path coverage
+    - data-flow coverage
+    - mutation testing
+    - test oracle
+- [x] tdd
+    - red-green-refactor
+    - benefits
+- [x] code review
+    - code review
+    - inspections
+    - walk through
+- [x] testing distributed systems
+    - Reliability measures
+    - robustness
+    - testing distributed systems
+        - stubs
+        - mocks
+        - fakes
+    - chaos engineering
+        - challenges
+        - purpose
+- [x] test smells
+    - test code duplication
+    - test logic in production
+    - erratic tests
+    - obscure tests
+    - assertion roulette
+    - condition logic in test
+    - slow tests
+    - mystery guest
+    - resource optimism
+    - test run war
+    - general fixture
+    - lazy test
+    - indirect test
+    - sensitive equality
+
+    ## Summary
+
+    - [x] black box testing
+    - [x] white box testing
+    - [x] tdd
+    - [x] code review
+    - [x] testing distributed systems
+    - [x] test smells
+    - [8] software quality
+    - [x] intro to software quality
