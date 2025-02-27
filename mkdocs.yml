@@ -21,6 +21,11 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+  - abbr
+  - attr_list
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
 
 extra_javascript:
   - javascripts/katex.js

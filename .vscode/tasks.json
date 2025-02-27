@@ -6,7 +6,7 @@
     {
       "label": "docs: start mkdocs",
       "type": "shell",
-      "command": "python3 -m mkdocs serve",
+      "command": "source docs_venv/bin/activate && python3 -m mkdocs serve",
       "runOptions": {
         "runOn": "folderOpen"
       },
