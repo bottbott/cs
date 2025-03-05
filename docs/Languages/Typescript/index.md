@@ -56,6 +56,15 @@ let message: string | null = null;
 let messageLength = message!.length;
 ```
 
+## Nullish Coalescing Operator
+
+The nullish coalescing operator is a way to check if a variable is null or undefined. If it is, then we can use a default value. This is useful when we want to set a default value for a variable.
+
+```typescript
+let message: string | null = null;
+let messageLength = message ?? "default";
+```
+
 ## Return Type
 
 We can specify the return type of a function by using a colon after the arguments and specifying the type. If the function doesn't return anything, then we can use the `void` type.
