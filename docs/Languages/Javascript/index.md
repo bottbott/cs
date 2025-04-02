@@ -22,6 +22,21 @@ console.log(hasEven); // true
 
 ## Operators
 
+### ? optional chaining
+
+If the method or property accessed does not exist, then `null` or `undefined` is returned instead of throwing an error.
+
+```js
+const person = {
+  name: "John",
+  age: 30,
+};
+
+const city = person.address.city; // Error: Cannot read property 'city' of undefined
+
+const city = person.address?.city; // null
+```
+
 ### ... spread
 
 The spread operator takes an iterator (such as a string or array), and lets us expand it into individual elements where we can use it in a function that expects zero or more arguments, or where elements are expected.
